@@ -1,0 +1,110 @@
+body {
+  margin: 2em;
+  background-color: #FFF;
+
+
+}
+
+.sidebar {
+        grid-area: sidebar;
+    }
+
+.content {
+        grid-area: content;
+    }
+
+.header {
+
+        grid-area: header;
+        display: flex;
+        align-content: center;
+    }
+
+.footer {
+        grid-area: footer;
+    }
+
+.wrapper {
+    background-color: #fff;
+    color: #444;
+    display: grid;
+    grid-gap: 1em;
+    grid-template-areas:
+     "header"
+     "sidebar"
+     "content"
+     "footer";
+  }
+
+#butcherPig {
+
+    max-width: 100%;
+    height: 350px;
+    padding-top: .5em;
+  }
+
+    @media only screen and (min-width: 500px)  {
+      .wrapper {
+          grid-gap: 1em;
+          grid-template-columns: repeat(3, auto);
+          grid-template-areas:
+            "header header header"
+            "sidebar content content"
+            "footer footer footer";
+          grid-auto-rows: minmax(150px; 100%);
+      }
+    }
+
+    @media only screen and (min-width: 600px)   {
+        .wrapper {
+          grid-gap: 1em;
+          grid-template-columns: repeat(3, auto);
+          grid-template-areas:
+            "header header header"
+            "sidebar content content"
+            "footer footer footer";
+          grid-auto-rows: minmax(150px; 100%);
+        }
+    }
+
+.box {
+    display: flex;
+    align-content: center;
+  background-color: rgba(255, 0, 0, 0.5);
+  color: #fff;
+  border-radius: .5em;
+  padding: 1em;
+  font-size: 150%;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+  background-color: #fff;
+  padding:4em;
+}
+
+
+.footer {
+  background-color: rgb(134, 134, 134);
+
+}
+
+.button{
+  margin: 1em;
+  border-radius: .25em;
+  font-size: 75%;
+}
+
+.info{
+  font-size: 100%;
+}
+
+.link{
+  color: #FFF;
+  text-decoration: underline;
+}
+
+.link:hover{
+  color: #444;
+}
